@@ -73,6 +73,22 @@ function selectableReducer(state = true, action) {
     }
 }
 
+/**
+ * State of this App:
+ * 
+ * questions: {
+ *    isFetching (Boolean): whether request for question data is in progress
+ *    data (Array): question data
+ * }
+ * score (Number): current score of the user
+ * selectedOption (Number): the index of the currently selected option
+ * optionClassNames (Array): the className property for each option. Used for dynamically changing 
+ *                           their styles.
+ * selectable (Boolean): whether the options and button are workable. Used for preventing user action
+ *                       after an answer is already submitted.
+ * 
+ */
+
 let rootReducer = combineReducers({
     questions: questionsReducer,
     score: scoreReducer,
