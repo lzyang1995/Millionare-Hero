@@ -20,3 +20,5 @@ Then in the main directory, run the following commands to start the app locally:
 npm install
 npm start
 ```
+
+Run `npm run build` for production build. You can refer to [Create React App](https://github.com/facebook/create-react-app) For more information about the commands.
