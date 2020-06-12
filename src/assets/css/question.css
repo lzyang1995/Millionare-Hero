@@ -1,0 +1,56 @@
+.loading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #fdfdfd;
+}
+
+.choices {
+    display: grid;
+    margin-bottom: 2rem;
+}
+
+.oneChoice {
+    display: flex;
+    padding: 8px;
+    border: 2px solid #dfdfdf;
+    border-bottom: none;
+    border-radius: 10px;
+    background-color: #ffffff;
+}
+
+.oneChoice:last-child {
+    border-bottom: 2px solid #dfdfdf;
+}
+
+.oneChoice input {
+    width: 1.2rem;
+    height: 1.2rem;
+    flex: none;
+    margin-top: 0.05rem;
+}
+
+.oneChoice div {
+    font-size: 1.2rem;
+    flex: auto;
+    padding-left: 10px;
+}
+
+.questionContainer {
+    padding: 0 5vw;
+}
+
+.questionContainer h2 {
+    margin-top: 2rem;
+    margin-bottom: 2rem; 
+}
+
+.bgLightGreen {
+    background-color: lightgreen;
+}
+
+.bgOrangeRed {
+    background-color: orangered;
+}

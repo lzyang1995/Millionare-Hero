@@ -1,26 +1,32 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+// import axios from 'axios';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { Provider } from 'react-redux'
+// import { DatePicker, List } from 'antd-mobile';
+import Cover from './view/Cover.js';
+import QuestionWrapper from './view/Question.js';
+import ResultWrapper from './view/Result.js';
+import store from './utils/store.js';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  // async componentDidMount() {
+  //   let result = await axios.get('http://localhost:8080/api/getQuestions');
+  //   console.log(result.data);
+  // }
+
+  render() {
+    return (
+      <Provider store={store}>
+        <Router basename="/baiwandati">
+          <Switch>
+            <Route path='/question/:id' component={QuestionWrapper} />
+            <Route path='/result' component={ResultWrapper} />
+            <Route path='/' component={Cover} />
+          </Switch>
+        </Router>
+      </Provider>
+    );
+  }
 }
 
 export default App;

@@ -1,0 +1,20 @@
+.cover {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10vw;
+    height: 100vh;
+    background-color: #fdfdfd;
+}
+
+.logoImg {
+    max-width: 100%;
+}
+
+.logo {
+    text-align: center;
+}
+
+.score {
+    text-align: center;
+}
